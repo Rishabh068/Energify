@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32901.82
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Energify", "Energify\Energify.csproj", "{AA784756-3976-4518-B6B7-3661C6C806F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA784756-3976-4518-B6B7-3661C6C806F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA784756-3976-4518-B6B7-3661C6C806F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA784756-3976-4518-B6B7-3661C6C806F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA784756-3976-4518-B6B7-3661C6C806F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BF868E9-5E34-4F1C-92D0-AB76165281F1}
+	EndGlobalSection
+EndGlobal
