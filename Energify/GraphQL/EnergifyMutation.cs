@@ -50,21 +50,21 @@ namespace Energify.GraphQL
            });
             Field<TicketType>(
            "addticket",
-           arguments: new QueryArguments(new QueryArgument<NonNullGraphType<ProductInputType>> { Name = "newticket" }),
+           arguments: new QueryArguments(new QueryArgument<NonNullGraphType<TicketInputType>> { Name = "newticket" }),
            resolve: context =>
            {
                var newticket = context.GetArgument<TicketEntity>("newticket");
-               return t.AddTicket(newticket.TicketId, newticket.Category, newticket.Description, newticket.Status);
+               return t.AddTicket(newticket.TicketId, newticket.Category, newticket.Description, newticket.Status,newticket.Email);
 
            }); 
             Field<TicketType>(
           "updateticket",
-          arguments: new QueryArguments(new QueryArgument<NonNullGraphType<ProductInputType>> { Name = "updateticket" }),
+          arguments: new QueryArguments(new QueryArgument<NonNullGraphType<TicketInputType>> { Name = "approve" }),
           resolve: context =>
           {
-              var newticket = context.GetArgument<TicketEntity>("newticket");
-              var rtm = newticket.TicketId;
-              return t.SetStatus(rtm);
+              var n = context.GetArgument<TicketEntity>("approve");
+
+              return t.SetStatus(n.TicketId);
 
 
           });

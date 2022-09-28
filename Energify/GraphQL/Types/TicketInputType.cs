@@ -13,9 +13,10 @@ namespace Energify.GraphQL.Types
 
             Name = "Ticketinput";
             Field<NonNullGraphType<StringGraphType>>("TicketId");
-            Field<NonNullGraphType<IntGraphType>>("Category");
-            Field<NonNullGraphType<IntGraphType>>("Description");
-           
+            Field<NonNullGraphType<StringGraphType>>("Category");
+            Field<NonNullGraphType<StringGraphType>>("Description");
+            Field<NonNullGraphType<StringGraphType>>("Email");
+
         }
     }
 }

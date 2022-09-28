@@ -18,9 +18,9 @@ namespace Energify.Repository
         {
             return _dbcontext.TicketList;
         }
-        public TicketEntity AddTicket(string id,string category,string desc,string status="IN PROGRESS")
+        public TicketEntity AddTicket(string id,string category,string desc,string status,string mail)
         {
-            var add = new TicketEntity() { TicketId = id, Category = category, Description = desc, Status = status };
+            var add = new TicketEntity() { TicketId = id, Category = category, Description = desc, Status = "IN PROGRESS",Email=mail };
             _dbcontext.TicketList.Add(add);
             _dbcontext.SaveChanges();
             return add;

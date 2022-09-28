@@ -11,6 +11,7 @@ namespace Energify.Data.Entity
         public string Category { get; set; }
         public string Description { get; set; }
         public string Status { get; set; }
+        public string Email { get; set; }
         [Key]
         public string TicketId { get; set; }
     }

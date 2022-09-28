@@ -124,15 +124,17 @@ namespace Energify.Data
             {
                 dbContext.TicketList.Add(new TicketEntity
                 {
-                    TicketId="RTM101",
+                    TicketId = "RTM101",
+                    Email = "abc@energify.com",
                     Category = "Shell Advance",
                     Description = "This is a two wheeler engine oil ",
                     Status = "Approved",
-                });
+                }); ;
                 dbContext.TicketList.Add(new TicketEntity
                 {
 
                     TicketId = "RTM102",
+                    Email = "abc@energify.com",
                     Category = "Shell Advance AX-5",
                     Description = "This is a two wheeler engine oil ",
                     Status = "Rejected",
@@ -143,6 +145,7 @@ namespace Energify.Data
                 {
 
                     TicketId = "RTM103",
+                    Email = "abc@energify.com",
                     Category = "Petrol",
                     Description = "This is Petrol ",
                     Status = "Approved",
@@ -152,6 +155,7 @@ namespace Energify.Data
                 {
 
                     TicketId = "RTM104",
+                    Email = "abc@energify.com",
                     Category = "Diesel",
                     Description = "This is Diesel ",
                     Status = "Approved",
@@ -161,6 +165,7 @@ namespace Energify.Data
                 {
 
                     TicketId = "RTM105",
+                    Email = "abc@energify.com",
                     Category = "Bio-diesel",
                     Description = "This is bio-diesel",
                     Status = "Rejected",
@@ -171,6 +176,7 @@ namespace Energify.Data
                 {
 
                     TicketId = "RTM106",
+                    Email = "abc@energify.com",
                     Category = "LPG",
                     Description = "This is LPG ",
                     Status = "Approved",

@@ -12,9 +12,11 @@ namespace Energify.GraphQL.Types
         public TicketType()
         {
             Field(t => t.TicketId);
+            Field(t => t.Email);
             Field(t => t.Category);
             Field(t => t.Description);
             Field(t => t.Status);
+           
         }
     }
 }
