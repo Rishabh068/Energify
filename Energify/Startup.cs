@@ -38,6 +38,7 @@ namespace Energify
           options.UseSqlServer(Configuration["ConnectionStrings:EnerGify"]));
             services.AddScoped<UserRepository>();
             services.AddScoped<ProductRepository>();
+            services.AddScoped<TicketRepository>();
 
             services.AddScoped<IServiceProvider>(s => new FuncServiceProvider(s.GetRequiredService));
             services.AddScoped<EnergifySchema>();

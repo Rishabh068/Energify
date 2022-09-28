@@ -12,7 +12,7 @@ namespace Energify.GraphQL
 {
     public class EnergifyQuery:ObjectGraphType
     {
-        public EnergifyQuery(UserRepository s,ProductRepository p)
+        public EnergifyQuery(UserRepository s,ProductRepository p,TicketRepository t)
         {
             Field<UserType>("loginuser", arguments: new QueryArguments(new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "email" },
                                                                        new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "pass" }), resolve: context =>
@@ -25,6 +25,10 @@ namespace Energify.GraphQL
                 "getproducts",
                 resolve: context => p.GetProducts()
                 );
+            Field<ListGraphType<TicketType>>(
+               "gettickets",
+               resolve: context => t.GetTickets()
+               );
 
         }
     }

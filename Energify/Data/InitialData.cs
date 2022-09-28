@@ -120,6 +120,65 @@ namespace Energify.Data
 
 
             }
+            if (!dbContext.TicketList.Any())
+            {
+                dbContext.TicketList.Add(new TicketEntity
+                {
+                    TicketId="RTM101",
+                    Category = "Shell Advance",
+                    Description = "This is a two wheeler engine oil ",
+                    Status = "Approved",
+                });
+                dbContext.TicketList.Add(new TicketEntity
+                {
+
+                    TicketId = "RTM102",
+                    Category = "Shell Advance AX-5",
+                    Description = "This is a two wheeler engine oil ",
+                    Status = "Rejected",
+
+                });
+
+                dbContext.TicketList.Add(new TicketEntity
+                {
+
+                    TicketId = "RTM103",
+                    Category = "Petrol",
+                    Description = "This is Petrol ",
+                    Status = "Approved",
+
+                });
+                dbContext.TicketList.Add(new TicketEntity
+                {
+
+                    TicketId = "RTM104",
+                    Category = "Diesel",
+                    Description = "This is Diesel ",
+                    Status = "Approved",
+
+                });
+                dbContext.TicketList.Add(new TicketEntity
+                {
+
+                    TicketId = "RTM105",
+                    Category = "Bio-diesel",
+                    Description = "This is bio-diesel",
+                    Status = "Rejected",
+
+
+                });
+                dbContext.TicketList.Add(new TicketEntity
+                {
+
+                    TicketId = "RTM106",
+                    Category = "LPG",
+                    Description = "This is LPG ",
+                    Status = "Approved",
+
+                });
+                dbContext.SaveChanges();
+
+            }
         }
     }
 }

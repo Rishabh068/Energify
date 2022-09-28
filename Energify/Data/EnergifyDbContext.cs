@@ -16,6 +16,7 @@ namespace Energify.Data
         }
         public DbSet<UserEntity> UsersList { get; set; }
         public DbSet<ProductEntity> ProductsList { get; set; }
+        public DbSet<TicketEntity> TicketList { get; set; }
 
 
     }

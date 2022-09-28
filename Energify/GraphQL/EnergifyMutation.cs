@@ -12,7 +12,7 @@ namespace Energify.GraphQL
 {
     public class EnergifyMutation: ObjectGraphType
     {
-        public EnergifyMutation(UserRepository s,ProductRepository p)
+        public EnergifyMutation(UserRepository s,ProductRepository p,TicketRepository t)
         {
             Field<UserType>("Registeruser", arguments: new QueryArguments(new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "email" },
                                                                            new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "pass" },
@@ -48,6 +48,26 @@ namespace Energify.GraphQL
         
 
            });
+            Field<TicketType>(
+           "addticket",
+           arguments: new QueryArguments(new QueryArgument<NonNullGraphType<ProductInputType>> { Name = "newticket" }),
+           resolve: context =>
+           {
+               var newticket = context.GetArgument<TicketEntity>("newticket");
+               return t.AddTicket(newticket.TicketId, newticket.Category, newticket.Description, newticket.Status);
+
+           }); 
+            Field<TicketType>(
+          "updateticket",
+          arguments: new QueryArguments(new QueryArgument<NonNullGraphType<ProductInputType>> { Name = "updateticket" }),
+          resolve: context =>
+          {
+              var newticket = context.GetArgument<TicketEntity>("newticket");
+              var rtm = newticket.TicketId;
+              return t.SetStatus(rtm);
+
+
+          });
 
         }
     }
