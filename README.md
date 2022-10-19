@@ -1,6 +1,5 @@
 # Energify
-Website for online fuel delivery and gas pipeline connections.
-Front end made with react and backend on dot net and graphql.
+Front end made with ReactJS and backend on ASP Dotnet core and graphql.
 This repo contains only backend part.
 ![image](https://user-images.githubusercontent.com/68421722/195769435-474444d4-a2b0-41db-9b52-d950cb9df8da.png)
 ![image](https://user-images.githubusercontent.com/68421722/195769949-08616309-9a50-4a4c-964b-2b2c539585c3.png)
